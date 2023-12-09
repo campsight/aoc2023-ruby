@@ -75,13 +75,6 @@ end
 
 
 
-card1 = "QQQJA"
-card2 = "T55J5"
-cv1 = hand_strength_value(card1)
-cv2 = hand_strength_value(card2)
-test = compare_hands(card1, card2)
-puts "Test result: #{test} with v1 = #{cv1} and v2 = #{cv2}"
-
 file_path = 'data/day7.txt'  # Replace with your actual file path
 winnings = total_winnings(file_path)
 puts "Total winnings: #{winnings}"
@@ -169,11 +162,10 @@ def total_winnings2(file_path)
 
   sorted_hands.each_with_index.sum do |(hand, bid), index|
     rank = index + 1  # Rank is index + 1 because index starts at 0
-    puts "Hand: #{hand}, Bid: #{bid}, Rank: #{rank}"  # Debug print
+    #puts "Hand: #{hand}, Bid: #{bid}, Rank: #{rank}"  # Debug print
     bid * rank
   end
 end
 
-puts "HSV2: #{hand_strength_value2("2687J")}"
 winnings2 = total_winnings2(file_path)
 puts "Total winnings Part 2: #{winnings2}"
