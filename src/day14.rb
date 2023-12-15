@@ -62,7 +62,7 @@ def calculate_load(platform)
   calculate_total_load(tilted_platform)
 end
 
-platform = read_and_parse_input('data/day14_test.txt')
+platform = read_and_parse_input('data/day14.txt')
 total_load = calculate_load(platform)
 puts "Total load on the north support beams: #{total_load}"
 
