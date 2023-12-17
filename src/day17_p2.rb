@@ -49,5 +49,12 @@ def parse_grid(file_path)
 end
 
 grid = parse_grid('data/day17.txt')
+t1 = Time.now
 puts search_path([0, 0], grid.keys.max, 1, 3, grid)
+t2 = Time.now
+delta_p1 = t2 - t1
+puts "Time for part 1: #{delta_p1} s"
 puts search_path([0, 0], grid.keys.max, 4, 10, grid)
+t3 = Time.now
+delta_p2 = t3 - t2
+puts "Time for part 2: #{delta_p2} s"
